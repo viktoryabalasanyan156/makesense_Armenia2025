@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MakeSense Armenia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background: #fff; color: #0a1a2f; line-height: 1.6; }
+    header { padding: 2rem; background: #fff; text-align: center; }
+    header h1 { font-size: 2.5rem; margin: 0; }
+    header p { font-size: 1.2rem; margin-bottom: 1rem; }
+    .btn { padding: 0.7rem 1.5rem; background: #ff4b4b; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+    nav { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
+    section { padding: 2rem; max-width: 960px; margin: auto; }
+    .program { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: space-between; }
+    .card { background: #0a1a2f; color: white; padding: 1rem; border-radius: 10px; flex: 1 1 30%; }
+    .registration input { width: 100%; padding: 0.7rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px; }
+    .faq-item { border-bottom: 1px solid #ccc; padding: 0.5rem 0; }
+    .faq-item summary { font-weight: bold; cursor: pointer; }
+    .map, .images { display: flex; gap: 1rem; margin-top: 1rem; }
+    .images img { width: 100px; height: auto; border-radius: 5px; }
+    footer { background: #f0f0f0; text-align: center; padding: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MakeSense Armenia</h1>
+    <p>Սեպտեմբերի 16-20, Սիսիան — Երևան, կոնգրես, քայլարշավ և տեղեկատվական միջոցառումներ</p>
+    <button class="btn">Գրանցվել հիմա</button>
+    <nav>
+      <button onclick="changeLanguage('hy')">🇦🇲 Հայերեն</button>
+      <button onclick="changeLanguage('en')">🇬🇧 English</button>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>Միջոցառման մասին</h2>
+    <p>MakeSense Armenia-ը իր տեսակի մեջ յուրահատուկ նախաձեռնություն է՝ նվիրված գլխի և պարանոցի քաղցկեղի մասին իրազեկմանը։ Միջոցառումն անց է կացվում սեպտեմբերի 16-20-ը՝ ներառելով մարզայց դեպի Սիսիան, կոնգրես Երևանում և քայլարշավ՝ հանրային իրազեկման նպատակով։</p>
+  </section>
+
+  <section id="program">
+    <h2>Ծրագիր</h2>
+    <div class="program">
+      <div class="card">
+        <h3>Սեպտ․ 16-17</h3>
+        <p>Մարզայց դեպի Սիսիան<br>Հանդիպումներ տեղում</p>
+      </div>
+      <div class="card">
+        <h3>Սեպտ․ 18-19</h3>
+        <p>Կոնգրես Երևանում<br>Բժշկական և հանրային քննարկումներ</p>
+      </div>
+      <div class="card">
+        <h3>Սեպտ․ 20</h3>
+        <p>Քայլարշավ<br>Քաղցկեղի դեմ իրազեկում</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="walk">
+    <h2>Քայլարշավի և մարզայցի մանրամասներ</h2>
+    <div class="map">
+      <iframe src="https://maps.google.com/maps?q=Yerevan&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300" frameborder="0" style="border:0;"></iframe>
+    </div>
+    <div class="images">
+      <img src="https://via.placeholder.com/150" alt="Sisan visit" />
+      <img src="https://via.placeholder.com/150" alt="Walk event" />
+    </div>
+  </section>
+
+  <section class="registration">
+    <h2>Գրանցում</h2>
+    <input type="text" placeholder="Անուն" />
+    <input type="text" placeholder="Ազգանուն" />
+    <input type="email" placeholder="Էլ․ փոստ" />
+    <input type="text" placeholder="Հեռախոս" />
+    <button class="btn">Ուղարկել</button>
+  </section>
+
+  <section id="faq">
+    <h2>Հաճախ տրվող հարցեր</h2>
+    <div class="faq-item">
+      <details>
+        <summary>Որտեղ է անցկացվելու միջոցառումը՞</summary>
+        <p>Մարզայց՝ Սիսիանում, կոնգրես և քայլարշավ՝ Երևանում։</p>
+      </details>
+    </div>
+    <div class="faq-item">
+      <details>
+        <summary>Ինչպե՞ս կարող եմ գրանցվել</summary>
+        <p>Օգտվեք գրանցման ձևից վերևում։</p>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    <p>Կապ՝ makesensearmenia@example.com | +374 00 000000</p>
+    <p>Կայքի QR կոդը՝ <br><img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://makesensearmenia.am" alt="QR կոդ"></p>
+  </footer>
+
+  <script>
+    function changeLanguage(lang) {
+      alert('Լեզվի փոփոխությունը դեռ կառուցման փուլում է:');
+    }
+  </script>
+</body>
+</html>
